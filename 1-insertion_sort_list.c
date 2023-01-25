@@ -37,7 +37,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *node;
 
-	if (!list || *list)
+	if (!list || !*list)
 		return;
 
 	node = *list;
