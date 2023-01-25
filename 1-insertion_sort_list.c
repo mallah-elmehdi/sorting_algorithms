@@ -35,8 +35,12 @@ listint_t *swap(listint_t *node_right, listint_t *node_left)
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *node = *list;
+	listint_t *node;
 
+	if (!list || *list)
+		return;
+
+	node = *list;
 	while (node && node->next)
 	{
 		if (node->n > node->next->n)
